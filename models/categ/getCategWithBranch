@@ -1,0 +1,11 @@
+var datacenter = require('../../config/database/datacenter')
+const getCategWithBranch = async (branch) => {
+    sql = "SELECT * FROM categories WHERE branch = ?"
+    return datacenter.promise().query(sql,[branch]).then(([rows]) => {
+        return rows;
+    }).catch((err) => {
+        console.error(err);
+        return false;
+    })
+}
+module.exports = getCategWithBranch
