@@ -8,6 +8,7 @@ const getData = async (ID,arr) => {
         newObj.push(ID);
         newArr.push(newObj)
     })
+    console.log(newArr,"newArrnewArrnewArr")
     sql = "INSERT INTO images (title,product) VALUES ?"
     return datacenter.promise().query(sql,[newArr]).then(([rows]) => {
         return ID;
