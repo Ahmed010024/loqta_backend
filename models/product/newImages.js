@@ -22,7 +22,6 @@ const getData = async (files) => {
             // Write the file
             fs.writeFile(newpath, data, function (err) {
                 if (err) throw err;
-                arrName.push(newName)
                 console.log('File written!');
             });
 
@@ -33,6 +32,7 @@ const getData = async (files) => {
             });
         });
 
+        arrName.push(newName)
 
         
 
