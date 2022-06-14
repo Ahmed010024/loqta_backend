@@ -5,7 +5,7 @@ const datacenter = mysql.createConnection({
   host: 'localhost',
   user: 'root',
   password:'',
-  database: 'l8ta',
+  database: 'loqta',
   multipleStatements: true
 });
 
