@@ -1,6 +1,6 @@
 var datacenter = require('../../config/database/datacenter')
 const getData = async () => {
-    sql = "SELECT *,CONCAT('http://localhost:3000/images/icon/',icon) as img FROM branches"
+    sql = "SELECT *,CONCAT('https://l8back.storkhost.com/images/icon/',icon) as img FROM branches"
     return datacenter.promise().query(sql).then(([rows]) => {
         return rows;
     }).catch((err) => {
